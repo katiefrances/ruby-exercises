@@ -11,6 +11,10 @@ subscribers = [
 # Ask the user for their firstname, lastname & email.
 # Add them to the subscriber list.
 
+user = gets.chomp
+
+puts subscribers.inspect
+
 # Steve's email is wrong, change it to s.woz@apple.com
 
 # Display the list of subscribers to the user, make it look

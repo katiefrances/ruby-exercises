@@ -4,27 +4,38 @@ subscribers = [
   "sheryl@facebook.com"
 ]
 
-# Take a moment to examine subscribers.
-
-# Put the first subscriber's email on screen
+# Put the first & second subscriber's email on screen
 puts subscribers[0]
-# Put the second subscriber's email on screen
 puts subscribers[1]
-# Ask the user for another email address
-# Only push it to the the array if it contains an @ symbol
 
+# Ask the user for another email address
 puts "What is your email?"
 email = gets.chomp
 
-
-
-
-
-# Put the last subscriber's email address on screen
-
+# Only push it to the the array if it contains an @ symbol
+if email.include? "@"
+  subscribers.push(email)
+else 
+  puts "Your email does not contain an @"
+end 
 
 # Ask the user for another email address
-# Only add it to the array if it isn't already in the list
+puts "Please enter another email address"
+email = gets.chomp
+  
+  if subscribers.include? subscribers.last
+     puts "Email already exits"
+    else # add to array
+    ubscribers.push(email)
+    puts "Email added"
+  end
 
-# Display all the emails on screen. Put an asterisks next to
-# any email that has 'facebook' in it.
+# Display all the emails on screen.
+puts subscribers.inspect
+
+# Put an asterisks next to any email that has 'facebook' in it.
+for subscriber in subscribers
+  if subscriber.include? "facebook.com"
+    puts "*" + " " + subscriber
+  end
+end
