@@ -26,7 +26,7 @@ email = gets.chomp
   if subscribers.include? subscribers.last
      puts "Email already exits"
     else # add to array
-    ubscribers.push(email)
+    subscribers.push(email)
     puts "Email added"
   end
 
